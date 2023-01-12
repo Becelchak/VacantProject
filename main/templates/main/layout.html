@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> {% block title %}{% endblock  %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    </head>
+    <body>
+        <header>
+            <h2>Инженер-программист</h2>
+        </header>
+        <aside>
+            <h3>Навигация по профессии</h3>
+            <ul class = "Pages">
+                <li>
+                    <a href="{% url 'home' %}"><i>Главная страница</i></a>
+                </li>
+                <li>
+                    <a href=" {% url 'needs' %}"><i>Востребованность</i></a>
+                </li>
+                <li>
+                    <a href=""><i>География</i></a>
+                </li>
+                <li>
+                    <a href=""><i>Навыки</i></a>
+                </li>
+                <li>
+                    <a href=""><i>Последние вакансии</i></a>
+                </li>
+            </ul>
+        </aside>
+        {% block content %}
+        {% endblock  %}
+    </body>
+</html>
