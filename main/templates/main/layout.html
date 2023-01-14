@@ -4,6 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
         <title> {% block title %}{% endblock  %}</title>
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     </head>
@@ -18,20 +21,24 @@
                     <a href="{% url 'home' %}"><i>Главная страница</i></a>
                 </li>
                 <li>
-                    <a href=" {% url 'needs' %}"><i>Востребованность</i></a>
+                    <a href="{% url 'needs' %}"><i>Востребованность</i></a>
                 </li>
                 <li>
-                    <a href=""><i>География</i></a>
+                    <a href="{% url 'geography' %}"><i>География</i></a>
                 </li>
                 <li>
-                    <a href=""><i>Навыки</i></a>
+                    <a href="{% url 'skills' %}"><i>Навыки</i></a>
                 </li>
                 <li>
-                    <a href=""><i>Последние вакансии</i></a>
+                    <a href="{% url 'lastVac' %}"><i>Последние вакансии</i></a>
                 </li>
             </ul>
         </aside>
         {% block content %}
         {% endblock  %}
+        <footer>
+            <h4>Выполнил: Зыков Роман Константинович</h4>
+            <h4>Прямиком из группы: РИ-210950</h4>
+        </footer>
     </body>
 </html>
