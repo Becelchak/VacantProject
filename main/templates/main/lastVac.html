@@ -3,5 +3,35 @@
 {% block title %}Последние вакансии{% endblock  %}
 
 {% block content %}
-<h3>Муки ждут</h3>
+<div class="Vacants">
+    <h1>Последние 10 вакансий взятые с <a href="https://ekaterinburg.hh.ru/">HH.ru</a>
+    </h1>
+    <section class="vac-list">
+        {% for item in geg %}
+        <ul>
+                <li>
+                    <b>Название вакансии:</b>   {{ item.name }}
+                </li>
+                <li>
+                    <b>Описание вакансии:</b>   {{ item.description }}
+                </li>
+                <li>
+                    <b>Навыки:</b>   {{ item.skills }}
+                </li>
+                <li>
+                    <b>Компания:</b>  {{ item.employer_name }}
+                </li>
+                <li>
+                    <b>Оклад:</b>   <i>{{ item.salary_from }} - {{ item.salary_to }}</i> {{ item.salary_currency }}
+                </li>
+                <li>
+                    <b>Название региона:</b>   {{ item.area_name }}
+                </li>
+                <li>
+                    <b>Дату публикации вакансии:</b>   {{ item.published_at }}
+                </li>
+            </ul>
+        {%  endfor %}
+    </section>
+</div>
 {% endblock %}

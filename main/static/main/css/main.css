@@ -1,7 +1,5 @@
 html{
-    height: 100%;
-    /* Аккуратно */
-    /* overflow:  hidden; */
+    height: 250%;
 }
 
 body{
@@ -44,7 +42,7 @@ header h2{
 aside{
     float: left;
     background: #EAE6AF;
-    width: 20%;
+    width: 18%;
     padding: 2.5%;
     height: 100%;
 
@@ -56,6 +54,8 @@ aside ul{
 }
 
 aside a{
+    font-size: 30px;
+
     color: black;
     display: block;
     margin-top: 15px;
@@ -76,13 +76,15 @@ footer {
     line-height: 10px;
 
     position: absolute;
-    left: 25%;
-    bottom: -41.5%;
     width: 100%;
+
+    border-top: #787878 solid 5px;
 }
 
 .prof-description{
     font-family: "Philosopher", serif;
+    display: grid;
+    flex: min-content;
 }
 .prof-description p {
     font-size: 18px;
@@ -90,6 +92,29 @@ footer {
 }
 
 .prof-description section{
-    margin-left: 490px;
+    width: 96%;
+    padding: 1%;
     text-align: justify;
+}
+
+.Vacants .vac-list{
+    display: grid;
+    flex: min-content;
+    padding: 3px;
+}
+
+.Vacants ul{
+    list-style: none;
+}
+.Vacants .vac-list a{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.Vacants h1 a{
+    color: white;
+    text-shadow: red 2px 2px 0, red -2px -2px 0,
+                 red -1px 1px 0, red 1px -1px 0;
+    text-decoration: none;
+    transition: all .6s ease;
 }

@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
+from .static.main.py import HHvacant
 
 def mainPage(request):
     return render(request,'main/index.html')
-
 
 def needs(request):
     return render(request,'main/needs.html')
@@ -17,4 +14,6 @@ def skills(request):
     return render(request,'main/skills.html')
 
 def lastVac(request):
-    return render(request,'main/lastVac.html')
+    data = {}
+    data['geg'] = HHvacant.get_HH_vacants()
+    return render(request,'main/lastVac.html', data)
