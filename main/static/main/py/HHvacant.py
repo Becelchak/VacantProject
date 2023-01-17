@@ -1,4 +1,3 @@
-import csv
 import datetime
 import requests
 
@@ -58,7 +57,7 @@ def get_HH_vacants():
     return answer
 
 
-# f = get_HH_vacants()
+f = get_HH_vacants()
 #
 # for item in f.items():
 #     a = item[0]

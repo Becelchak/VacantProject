@@ -44,7 +44,7 @@ aside{
     background: #EAE6AF;
     width: 18%;
     padding: 2.5%;
-    height: 100%;
+    height: 200%;
 
     border-right: #787878 solid 5px;
 }
@@ -75,7 +75,8 @@ footer {
     font-size: 28px;
     line-height: 10px;
 
-    position: absolute;
+    display: grid;
+    flex: border-box;
     width: 100%;
 
     border-top: #787878 solid 5px;
@@ -117,4 +118,19 @@ footer {
                  red -1px 1px 0, red 1px -1px 0;
     text-decoration: none;
     transition: all .6s ease;
+}
+
+.needs-content img {
+    position: relative;
+    left: 350px;
+}
+
+.geography-content img {
+    position: relative;
+    left: 350px;
+}
+
+.skill-content img {
+    position: relative;
+    left: 350px;
 }
