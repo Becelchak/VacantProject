@@ -120,7 +120,7 @@ footer {
     transition: all .6s ease;
 }
 
-.needs-content img {
+.needs-content img, embed{
     position: relative;
     left: 350px;
 }
@@ -130,7 +130,7 @@ footer {
     left: 350px;
 }
 
-.skill-content img {
+.skill-content img{
     position: relative;
     left: 350px;
 }
